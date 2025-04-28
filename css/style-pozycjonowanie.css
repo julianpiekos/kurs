@@ -1,0 +1,110 @@
+* {
+    margin: 0;    /* ustawiamy zerowy margines dla wszystkich tagów, żeby nigdzie nie było domyślnych niezerowych marginesów */
+}
+
+:root {
+   --kontener2-width: 940px;    /*  deklaracje zmiennych dla najwyższego tagu (tj. tagu html) */
+}
+
+#kontener {   /* tag-rodzic dla tagu h1; wycentrowany z tłem czerwonym i o szerokości 900px */
+    margin: 0 auto;
+    background-color: red;
+    width: 900px;
+}
+
+
+
+h1 {
+    background-color: aqua;  /* kolor tła wewnątrz borderu (za zawartością i paddingiem)*/
+    padding: 10px 0 10px 20px;  /* padding ustawiany metodą zegarka tj. od top do left; można też ustawić osobno np. padding-left */
+    border-left: 5px solid black;  /* obramowanie z lewej strony paddingu: [grubość] [styl] [kolor] */ 
+    margin: 10px 10px 50px 10px; /* margines - tj. dookoła paddingu - ustawiany metodą zegarka */
+    width: 700px;   /* szerokość zawartości obiektu */ 
+    text-align: center;  /* wycentrowanie tekstu w ramach zawartości (ale nie w ramach kontenera) */
+    margin: 0 auto;  /* margines 0 dla top i bottom i wycentrowany (auto) dla left i right - w ramach zawartości kontenera, czyli tagu-rodzica; kontenerem może być body */
+
+    /*        sposoby definiowana marginesów:
+    margin: [GORA] [PRAWO] [DOL] [LEWO]
+    margin: [GORA, DOL] [PRAWO, LEWO]
+    margin: [GORA, DOL, PRAWO, LEWO]
+    */
+}
+
+.link
+{
+    --link-margin-left: 10px;     /* deklaracje zmiennych obowiązujących w obrębie selektora .link (tj. w ramach tagów klasy link) */
+    --link-padding: 15px;
+    --link-border-left: 5px;
+
+    padding: var(--link-padding);         /* fk. var() przywołuje wartość zmiennej obowiązującej w ramach danego tagu */
+    border-left: var(--link-border-left) solid blue;
+    margin-left: var(--link-margin-left);
+    box-sizing: content-box;    /* domyślnie boxem jest sam kontent i jego dotyczy cecha width; alternatywnie może być border-box, 
+                                 czyli width obejmuje oprócz kontentu dodatkowo padding i border */
+    width: calc((var(--kontener2-width) - var(--link-margin-left)) / 6 - (2 * var(--link-padding)) - var(--link-margin-left) - var(--link-border-left));  /* funkcja kalkulująca wynik dopasowanej  
+                                                                                                                                                     szerokości obiektu klasy link */
+
+    display: inline-block;   /* "inline-block", czyli block ale domyślnie o szerokości zawartości tagu, 
+                                czyli jak w inline, ale można mu ustawiać width i height */
+    background-color: aqua; 
+    
+    text-align: center;
+
+    /*
+    całkowita szerokość obiektu = width + padding-left + padding-right + border-left + border-right + margin-left + margin-right
+    całkowita szerokość 6 obiektów klasy link: 6*(110+15+15+5+10) = 6*155 = 930
+    szerokość kontener2 ustawimy więc na 930 + 10 = 940px, żeby z prawej jeszcze wystawało te 10px czerwonego tła kontenera symetrycznie do marginesu 10px z lewej
+    */
+}
+
+#kontener2 {   /* tag-rodzic dla tagu h1; wycentrowany z tłem czerwonym i o szerokości 900px */
+    margin: 0 auto;
+    background-color: red;
+    width: var(--kontener2-width);
+}
+
+/*
+    Wartości cechy position:
+    - static - statyczny (tryb domyślny) 
+    - relative - względem SIEBIE (przesunięcie top/right/bottom/left względem oryginalnej pozycji obiektu)
+    - absolute - bezwględne/niezależne położenie w obrębie strony (tj. gdy scrollujesz stronę to obiekt PRZESUWA się wraz ze stroną)
+    - fixed - ustalone położenie w ramach widocznej części strony (tj. gdy scrollujesz stronę to obiekt NIE PRZESUWA się wraz ze stroną)
+    
+    Cechy określane przy position równym relative/absolute/fixed:
+    - top
+    - right
+    - bottom
+    - left
+*/
+
+#menu_dolne {
+    background-color: aqua;
+    position: fixed;
+    bottom: 0;      /* zawsze na dole widocznej części strony */ 
+    padding: 10px;
+    width: 100%;
+}
+
+#kontener3 {
+    margin: 50px auto;     /* wycentrowanie po bokach i 50px od góry i od dołu */
+    width: 700px;          /*cechy #kontener3 są dziedziczone do #top i #sample */
+}
+
+#kontener3 #top address {   /* cechy dla obiektów typu address w ramach obiektu o id=top który jest w ramach obiektu o id=kontener3 */
+    color: teal;
+    position: absolute;    /* pozycjonowanie absolute w ramach obiektu-rodzica, czyli traktuje rodzica jakby był on całą stroną */
+    right: 20px;
+    top: 50px;
+}
+
+#top {
+    position: relative;          /* ustawione po to by można było użyć wobec obiektu-dziecka pozycjonowania absolute w ramach obiektu-rodzica */
+    background-color: #262726;
+    box-sizing: border-box;   /* width dotyczy obiektu zawierającego łącznie kontent, padding i border */
+    padding: 50px;
+}
+
+#sample {
+    background-color: #acacac;
+    padding: 50px;
+}
