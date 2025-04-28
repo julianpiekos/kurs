@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Kontaktowy</title>
+</head>
+<body>
+    <form action="send_mail.php" method="post">
+        <fieldset>
+            <legend>Skontaktuj się z nami</legend>
+
+            E-mail: <input type="email" name="email" id= "email" placeholder="@" required> <br>
+            Imię: <input type="text" name="imie" id= "imie" required> <br>
+            Temat: <input type="text" name="temat" id= "temat" required> <br><br>
+            Treść maila: <br> <textarea name="tresc" id="email_content" cols="30" rows="10" placeholder="Wpisz tu treść maila" required></textarea>
+            <br><br>
+            Kiedy wysłać odpowiedź: <input type="date" name="data_odpowiedzi" id="data_odpowiedzi" min="2024-02-01" max="2025-12-31" value="2024-02-01" required> 
+            <!--pole inputowe typu data z ograniczonym zakresem możliwych wartości daty (od min do max) i wartością domyślną value-->
+            <input type="time" name="godzina_odpowiedzi" id="godzina_odpowiedzi" required><br><br>  <!--pole inputowe typu czas-->
+            <input type="submit" value="Wyślij">
+        </fieldset>
+    </form>
+</body>
+</html>
