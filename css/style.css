@@ -1,0 +1,262 @@
+table
+{
+    background-color: rgb(238, 255, 0);
+}
+
+p,span,td,th,a,h1,h2,h3,h4,h5,h6,li
+{
+    font-weight: bold;
+    color: rgb(0, 26, 255)
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg');  /* ustawienie podlinkowanego zdjecia w tle */
+    background-size: 100%;   /*  rozciąga zdjęcie w tle na całą szerokość strony */
+    background-attachment: fixed;   /* zdjęcie w tle nie przesuwa się wraz ze scrollowaniem strony */
+}
+
+#paragraf, #paragraf span     /* tekstowi w unikalnym obiekcie o id=paragraf i w obiektach w ramach tagu span, które są w unikalnym obiekcie o id=paragraf, nadaje kolor pomarańcz. */
+{
+    color:rgb(255, 136, 0)
+}
+
+.wycentrowane    /* zdefiniowana tu klasa 'wycentrowane' nadaje charakter wycentorwany tekstowi w obiekcie, któremu ją przypisano */
+{
+    text-align: center;
+}
+
+h1 {
+    background-image: url('../images/tlo-h1.png');     /* tło dla nagłówka najwiekszego pobierane z pliku */ 
+    color: red;
+}
+
+
+span {
+    color: black;
+}
+
+.div-text {              /* klasa ta określa szerokość bloku z tekstem na 400px */
+    width: 400px;
+}
+
+.type1 {
+    background-color: red;
+    display: block;
+}
+
+.type2 {
+    background-color: darkgreen;
+    display: inline;
+}
+
+.type3 {
+    background-color: blue;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+}
+
+#tabela_selektory {
+    border-collapse: collapse;       /* łączy bordery z sąsiednich komórek w tabeli w jeden border */
+    margin: 10px;
+}
+
+table tr {
+    border-bottom: 1px solid black;
+}
+
+#tabela_selektory td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+caption, table th {
+    padding: 5px;
+    font-size: 24px;
+}
+
+/*
+top -    góra
+right -  prawa
+bottom - dół
+left -   lewa
+
+border: grubosc_bordera style kolor;
+
+ZASADA ZEGARKA: GORA, PRAWO, DÓŁ, LEWO
+
+border-style: 1 wartość
+1 wartość - ustalana dla wszystkich obramowań
+border-style: 1 wartość 2 wartość;
+1 wartość - ustalana dla gory i dolu
+2 wartość - ustalana dla lewej i prawej
+border-style: 1 wartość 2 wartość 3 wartość 4 wartość;
+1 wartość - gora
+2 wartość - prawo
+3 wartość - dol
+4 wartość - lewo
+*/
+
+.none {border-style: none;}
+.dotted {border-style: dotted;}
+.dashed {border-style: dashed;}
+.solid {border-style: solid;}
+.double {border-style: double;}
+.groove {border-style: groove;}
+.ridge {border-style: ridge;}
+.inset {border-style: inset;}
+.outset {border-style: outset;}
+.lewa_strona {border-left-style: solid;}
+.rozne_parametry {border: 5px double rgb(189, 24, 24);}
+
+#border div, #border {
+    margin: 20px;
+}
+
+.definicja1
+{
+    border: 1px solid chocolate;
+    border-left-width: 5px;
+    border-top-style: none;
+    border-right-style: none;
+    width: 300px;
+}
+
+.definicja2
+{
+    border-style: none none double solid;   /* zasada zegarka: góra, prawo, dół, lewo */
+    width: 300px;
+    text-align: center;
+}
+
+.zaokr_kraw {
+    background-color: aqua;
+    border-radius: 10px 50px;    /* zaokrąglenie rogów boxu z podanym promieniem (przy zróżnicowanym promieniu zaokrąglenia: zasada zegarka począwszy od lewego górnego rogu */
+    text-align: center;
+    padding: 30px;    /* margines górny i dolny między krawędzią a tekstem */
+}
+
+#link_test2:link, #link_test2:visited {         /* określanie stylu linku nieodwiedzonego (link) oraz odwiedzonego (visited) dla obiektu o id="link_test2" */ 
+    text-decoration: none;                      /* brak dekoracji tekstu linku (np. domyślnie jest podkreślenie) */ 
+    color: black;
+    border: 1px solid cornflowerblue;         /* obramowanie pola obiektu */ 
+    background-color: white;                  /* kolor tła obiektu */ 
+    padding: 10px;
+    display: inline-block;
+}
+
+#link_test2:hover, #link_test2:active {        /* określanie stylu obiektu o id="link_test2" w momencie najechania kursorem (hover) i klikania (active) */
+    background-color: cornflowerblue;
+    color: white;
+}
+
+a:link {                 /* ustawienie koloru tekstu w linkach nieodwiedzonych w obiektach typu "a" na stronie */ 
+    color: black;
+}
+
+/*
+ul           komenatrz: ustawienie jako punktora listy nienumerowanej obrazka z pliku tick.png 
+{
+    list-style-image: url("../images/tick.png");
+}
+*/
+
+ul
+{
+    list-style-type: none;     /* usunięcie punktora z list nienumerowanych */ 
+}
+
+ul li::before
+{
+    content: "\2714\00A0";    /* wstawienie przed elementem (ale za punktorem) w listach nienumerowanych znaków tick (kod hex z UTF-8: \2714) i spacja (kod hex z UTF-8: \00A0) 
+                                  - zastąpią punktor gdy go wymażemy*/ 
+    color: red;             /* ustawienie koloru wstawionych znaków */
+}
+
+ol {
+    list-style-type: upper-roman;   /* ustawienie jako punktora list numerowanych liczb rzymskich dużych */
+}
+
+#videokursy img {
+    opacity: 0.7;           /* opacity to paramretr przezroczystości obiektu w skali od 0 do 1: 0 - niewidoczny, 1 - brak przezroczystości zupełny*/ 
+}
+
+#videokursy img:hover {
+    opacity: 1;
+}
+
+#komunikat {
+    width: 400px;
+    padding: 100px;
+    background-color: rgba(84, 152, 179, 0.9);    /* ostatni parametr w rgba to opacity czyli przezroczystość - tutaj dotyczy tylko tła */ 
+    text-align: center;
+    position: fixed;   /* fixed - pozycja nieprzesuwająca się wraz ze scrollowaniem strony; absolute - przesuwa się, ma stałe miejsce na stronie i zasłania inne elementy */ 
+    left: 50%;                /* parametry pozycjonowania obiektu na stronie - ile odlegości od lewej i od góry */
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.help {
+    cursor: help;          /* kursor jest ze znakiem zapytania nad obiektem o klasie 'help' */
+}
+
+[data-dymek]:hover::after {       /* definiuje co się pojawia za obiektem z atrybutem 'data-dymek' w momencie najechania na ten obiekt kursorem */
+    content: attr(data-dymek);
+    background-color: rgba(0, 255, 255, 0.582);
+    padding: 15px;
+    position: absolute;
+}
+
+
+.test-tekst {
+    width: 500px;
+    background-color: rgb(238, 238, 164);
+    padding: 10px;
+    text-align: justify;      /* justyfikacja tekstu (brak wcięć) */
+    white-space: pre-line;    /* zachowuje entery ale już nie spacje wielokrotne; pre-wrap zachowuje wszystkie białe znaki */
+    text-decoration: underline dotted red;    /* cechy dekoracji tekstu: [line] [style] [color] */ 
+}
+
+.imie-nazwisko {
+    text-transform: capitalize;    /* pisanie wyrazów z dużej litery */ 
+}
+
+.przyklad {
+    width: 70%;    /* ustawia szerokość obiektu klasy 'przyklad' na 70% szerokości strony */ 
+    padding: 10px;
+    text-align: justify;
+    text-indent: 30px;    /* wcięcie pierwszego wiersza akapitu na poziomie 30px */
+    line-height: 130%; /* wysokośc linii tekstu - nie zmienia to wielkości czcionki */
+    word-spacing: 0.1em; /* odległość między słowami (wyrażona w odniesieniu do dziedziczonej wielkości czcionki czyli 'em' */
+    letter-spacing: 110%;  /* odległość między literami w % domyślnej/dziedziczonej wartości - może być też w px lub em wyrażone */
+    font-variant: small-caps;   /* wariant czcionki np. normalny, kapitaliki, odziedziczony */ 
+    font-family: "Underdog", Arial, Helvetica, sans-serif;  /* typy czcionki preferowane (począwszy od lewej przeglądarka szuka, który typ czcionki ma i go stosuje) */
+    font-weight: 200;  /* stopień pogrubienia czcionki wyrażony liczbowo (od 100 do 900) lub np. bold*/ 
+    font-style: italic;  /* specyfikacja stylu danej czcionki np. kursywa projektowana (italic) lub wymuszona (oblique) */ 
+    font-size: 120%;
+}
+
+.przyklad::first-letter {    /* ustawienie cech pierwszej litery obiektu klasy 'przyklad' */
+    font-size: 1.5em;    /* wielkość czcionki na poziomie 1.5 odziedziczonej wielkości czcionki (np. ustawionej dla body); 
+                            'em' zawsze odnosi się do dziedziczonej wielkości czcionki ale można tej jednostki używać do definiowania innych cech niż wielkość czcionki */
+    font-weight: bold;
+    color: red;
+}
+
+#do-gory {
+    background-color: rgba(255, 255, 0, 0.8);   /* kolor tła obiektu gdy nie ma na nim kursora - lekka przezroczystość (opacity=0.8) */
+    font-size: 40px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+#do-gory:hover {        /* kolor tła obiektu gdy kursor najedzie na niego - brak przezroczystości (opacity=1) */
+    background-color: rgba(255, 255, 0, 1);
+}
