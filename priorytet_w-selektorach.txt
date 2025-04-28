@@ -1,0 +1,6 @@
+1. !important - "!important" dopisane w 'inline css' (tj. w atrybucie style danego tagu) przed średnikiem daje najwyższy priorytet
+2. inline css - styl zdefinowany w atrybucie style danego tagu
+3. id selector - w pliku CSS lub w tagu style w ramach head styl przypisany do danego id tagu
+4. class selector - w pliku CSS lub w tagu style w ramach head styl przypisany do danej zdefiniowanej klasy
+5. selector tag - w pliku CSS lub w tagu style w ramach head styl przypisany do danego typu tagu
+6. odziedziczony - styl odziedziczony z tagu-rodzica (tagu wewnątrz którego znajduje się dany tag)

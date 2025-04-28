@@ -1,0 +1,52 @@
+
+Nasze zdefiniowane skróty: 
+
+ctrl + shift + alt + Z    - opatulenie zaznaczonego tekstu wybranym tagiem
+
+
+
+
+
+Ogólne skróty:
+
+ctrl + / - wykomentowanie linijki skryptu
+ctrl + spacja - pokaż listę rzeczy, które możesz wpisać w danym miejscu (np. lista atrybutów lub plików)
+F1 albo ctrl+shift+P - otworzenie menu z poleceniami
+ctrl + , - otworzenie menu settings (np. auto save ustawić po 2000 ms)
+ctrl + U - otworzenie źródła strony w przeglądarce
+alt + lewy przycisk myszki - dodaje kursor w kolejnym miejscu i można pisać w kilku miejscach jednocześnie (tzw. multikursor)
+alt + Z - łamanie skryptu po prawej stronie do kolejnej linijki, żeby za daleko nie sięgał w prawo, bo niewygodnie
+ctrl + H - znajdź i zamień w ramach skryptu
+
+
+Emmet skróty:
+
+! - wstawia szablon strony html 5
+- wpisujemy:  p[title]*3 
+   i dostajemy:	
+<p title=""></p>
+<p title=""></p>
+<p title=""></p>
+
+ul>li[title="sample$"]{sample$}*3 - wstawia szablon listy nienumerowanej z 3 pozycjami o treści "sample1", "sample2" itd. i dymkiem z tą samą etykietą,
+                                    po których można się poruszać tabem
+
+dl>(dt+dd)*3 - wstawia następujący skrypt:		
+      <dl>
+			<dt></dt>
+			<dd></dd>
+			<dt></dt>
+			<dd></dd>
+			<dt></dt>
+			<dd></dd>
+		</dl>
+
+h${Nagłówek $}*3 - generuje 3 nagłówki pod sobą, każdy kolejny mniejszy od poprzedniego, każdy o treści "Nagłówek [nr nagłówka]", czyli:
+		<h1>Nagłówek 1</h1>
+		<h2>Nagłówek 2</h2>
+		<h3>Nagłówek 3</h3>
+
+.klasa - robi tag div z klasą o nazwie 'klasa'
+
+em>#identyfikator - robi tag em z tagiem span z id o wartości 'identyfikator'
+

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pl" style="scroll-behavior: smooth;">   <!-- gładkie przesuwanie przy scrollowaniu -->
+	<head>
+		<meta charset="UTF-8">     <!-- ustawienie kodowania znaków na stronie (dla starszych przeglądarek: <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> )-->
+		<title>
+			To jest jakiś tytułek :-)
+		</title>
+		<meta name="author" content="julek i tata">
+		<meta name="description" content="sciagawka html">
+
+		<link rel="icon" type="image/png" href="ikonki/favicon-96x96.png" sizes="96x96" />  <!-- odniesienia do plików ikon strony w różnych formatach-->
+		<link rel="icon" type="image/svg+xml" href="ikonki/favicon.svg" />
+		<link rel="shortcut icon" href="ikonki/icon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="ikonki/apple-touch-icon.png" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">      <!-- pobranie nietypowej 
+		czcionki Underdog z 'google fonts' -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">    <!-- link do arkusza stylów CSS-->
+
+		<style>
+			p
+			{
+				color: blue;    /*ten kolor dla obiektu p ma pierwszeństwo nad ustawionym w pliku CSS, ale ustępuje temu zadeklarowanemu jako atrybut style 
+				                     bezpośrednio w tagu p; gdy brak deklaracji koloru w tagu jak i w headzie jako i w pliku CSS to stosowany jest styl z przeglądarki*/
+			}
+			/*
+			body {
+			margin: 100vw;
+			}
+			*/
+		</style>
+	</head>
+	
+	<body>
+		<!-- <audio controls src="01SugarMan.mp3" type="audio/mp3">
+		</audio> -->
+		<p >   
+			<i><b>To jest jakiś tekst :-)</b></i>
+		</p>
+		
+		<p>
+			&lt;b> - pogrubienie tekstu <br>         <!-- przykłady encji -->
+			&quot;tekst&quot; - tekst w apostrofie
+		</p>
+		
+		<p id="paragraf">   <!-- oznaczenie paragrafu identyfikatorem "paragraf", żeby można było ten obiekt przywoływać-->
+			To jest jakiś tekst :-) <br>
+			To jest jakiś <span title="bardzo mądry">tekst</span> :-)   <!--wyświetlenie tekstu z atrybutu title w dymku na stronie, span to neutralny tag nic nie robiący a służący np ustawieniu atrybutu -->
+		    To jest jakiś tekst :-)
+	    </p>
+		<p>
+			paragraf
+		</p>
+		<img src="images/front-sklepu.jpg" alt="front sklepu" width="500" height="400">   <!--ctrl+shift+p "update image size" - import wartosci width i height-->
+		<br>
+		<a id="link_test2" href="test/test2/test2.html" target="_blank">Strona test2</a>  <!-- link wewnętrzny otwierany w nowej zakładce-->
+
+		<p>
+			To jest jakiś tekst :-)
+			<b><i>To jest jakiś tekst :-)</i></b>
+			<a href="http://videokurs.pl" target="_blank" rel="noopener noreferrer"> strona kursu HTML </a> <!--do otwierania linka zewn. w nowej karcie służy atrybut target="_blank"-->
+			To jest jakiś tekst :-)<br>
+			To jest jakiś tekst :-)				
+			To jest jakiś tekst :-)To jest jakiś tekst :-)
+	    </p>
+		
+		<h1 class="wycentrowane">największy nagłówek</h1>
+		<h2 class="wycentrowane">trochę mniejszy nagłówek</h2>
+		<h3 class="wycentrowane">jeszcze mniejszy nagłówek</h3>
+		<h4>dosyć mały nagłówek</h4>
+		<h5>mały nagłówek</h5>
+		<h6>najmniejszy nagłówek</h6>
+
+		<p>
+			<cite>Hamlet</cite>
+			<blockquote>
+				Być albo nie być, oto jest pytanie.
+			</blockquote>
+		</p>
+		<br>
+		
+		<p>
+           Julek powiedział: <q>Chcę robić kurs HTML!</q>
+		</p>
+		<br>
+
+		<p>
+			<q>You're my heart, you're my soul!</q><br>
+			<cite>Modern Talking</cite>
+		</p>
+
+
+		<ul>
+			<li>pierwszy element listy bez numerów</li>
+			<li>drugi element listy bez numerów</li>
+			<li>trzeci element listy bez numerów</li>
+		</ul>
+
+		<ul>
+			<li title="sample1">sample1</li>
+			<li title="sample2">sample2</li>
+			<li title="sample3">sample3</li>
+		</ul>
+
+		<dl>    <!-- lista definicji - specjalne formatowanie trybu zapisu listy-->
+			<dt>tag head</dt>  <!-- pojęcie definiowane -->
+			<dd>w nim są informacje dot. strony</dd>  <!-- treść definicji -->
+
+			<dt>tag title</dt>
+			<dd>w nim jest określony tytuł strony</dd>
+		</dl>
+
+		<ol>
+			<li>pierwszy element listy z numerami</li>
+			<li>drugi element listy z numerami</li>
+			<li>trzeci element listy z numerami</li>
+		</ol>
+
+		<dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> to język znaczników do tworzenia stron internetowych. <br><br>
+		<!-- oznaczenie elementu jako skrótu (po najechaniu kursorem pełny tekst się wyświetla) i jednocześnie jako definicji -->
+
+		<p style="color: yellowgreen;">tekst</p>
+	    
+		
+		FORMATOWANIE TEKSTU: <br>
+		<strong>Uwielbiam</strong> koty i psy. <br>  <!-- uwypuklenie tekstu poprzez pogrubienie; efekt taki jak tagu <b> -->
+		<em>Nie znoszę</em> hipopotamów. <br>   <!-- nacisk na tekst poprzez kursywę; efekt taki jak tagu <i> -->
+		<mark>Lubię</mark> chomiki. <br>    <!-- oznaczenie tekstu żółtym tłem-->
+		Uwielbiam <u>chodzenie po górach</u>. <br>   <!-- podkreślenie tekstu-->
+		Lubię pizzę, hotdogi <s>i burgery</s>. <br>  <!-- wykreślenie tekstu-->
+
+		H<sub>2</sub>O   <!--subskrypt czyli indeks dolny-->
+		<br>
+		<var>x</var><sup>2</sup>=0  <!--var - oznaczenie jako zmienna; sup - superskrypt czyli indeks górny-->
+
+		<pre>      <!-- teskt preformatowany, który jest pokazywany w formie nieinterpretowanej-->
+			Jakiś tekst nowiutki.
+					Jakiś tekst nowiutki.
+			Jakiś tekst nowiutki.
+			Skrypt:
+			<code>for(i in 1:10) {print("OK")}</code>  <!--oznacz jako fragment skryptu-->
+
+		</pre>
+		
+		<h3>&#122;&#97;&#115;&#122;&#121;&#102;&#114;&#111;&#119;&#97;&#110;&#121;&#32;&#116;&#101;&#107;&#115;&#116;</h3> 
+		<br>
+
+		<form action="login.php" method="POST">   <!-- formularz wysyłający wprowadzone dane do pliku 'login.php' bez ujawniania ich treści w URL-->
+			Login: <input type="text" name="login"> <br>
+			Hasło: <input type="password" name="haslo" placeholder="min 8 znaków">   <!-- niewidoczne znaki hasła podczas wpisywania; wartość atrybutu placeholder to tekst wyświetlany przed uzupełnieniem wartości pola -->
+			<br>
+			<input type="submit" value="Zaloguj się">  <!-- przycisk przesyłający dane wprowadzone w ramach tego tagu 'form'-->
+		</form>
+		<br>
+
+		<form action="ankieta.php">
+			<fieldset>    <!--pole obramowane -->
+				<legend>Ile masz lat?</legend>   <!--wcięcie zawartości w ramkę pola fieldset -->
+				<!--pola inputowe polegające na wyborze jednej kategorii wiekowej z trzech-->
+				<input type="radio" name="kat_wiek" id="kat_wiek1" value = "1-10"><label for="kat_wiek1">1-10</label> <br>  <!--nadaje wartość "1-10" obiektowi "kat_wiek"-->
+				<input type="radio" name="kat_wiek" id="kat_wiek2" value = "11-30" checked><label for="kat_wiek2">11-30</label> <br>  <!--atrybut checked to ustawienie inputu jako domyślnie zaznaczonej opcji; nie ustawiamy jego wartości-->
+				<input type="radio" name="kat_wiek" id="kat_wiek3" value = "31-50"><label for="kat_wiek3">31-50</label> <br>
+			</fieldset>
+
+			<fieldset>
+				<legend>Jakie jest twoje hobby?</legend>
+				<input type="checkbox" name="hobby" id="hobby1" value="kodowanie_html"> <label for="hobby1">kodowanie w html</label>
+				<input type="checkbox" name="hobby" id="hobby2" value="kodowanie_css"> <label for="hobby2">kodowanie w css</label>
+				<input type="checkbox" name="hobby" id="hobby3" value="kodowanie_js"> <label for="hobby3">kodowanie w js</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>Adres</legend>
+				nr domu:<input type="text" value="4G" name="nr_domu" required autofocus>  <!--atrybut required (nie ustawiamy jego wartości) ustawia input jako wymagane do wypełnienia pole -->
+				<!-- atrybut autofocus ustawia dane pole tak aby po odświeżeniu strony od razu było ustawione wpisywanie do tego pola;
+				 atrybut value w inpucie typu text określa domyślnie wpisaną wartość pola-->
+				nr mieszkania:<input type="text" autocomplete="off" name="nr_mieszkania" maxlength="2" size="5"> <!--atrybut autocomplete robi tak aby po wejściu na jakiś link a potem się cofnięciu na tą stronę wartości były lub nie były wpisane (wartości: on i off); size to szerokość pola tekstowego a maxlength to max długość wartości inputu w znakach-->
+			</fieldset>
+		
+			<input type="submit" value="Wyślij">
+		</form> <br>
+        
+		<!--tworzenie tabeli z 5 kolumnami i 3 wierszami: table>caption{tytuł tabeli}+(tr>th{Kol$}*5)+(tr>td{Zawartość $}*5)*3 -->
+		
+		<table border="1">   <!-- atrybut border to ustawienie typu ramki tabeli-->
+			<caption>Tabela</caption>
+            <thead>
+				<tr>
+					<th>Kol1</th>
+					<th>Kol2</th>
+					<th>Kol3</th>
+					<th>Kol4</th>
+					<th>Kol5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Zawartość 1</td>
+					<td>Zawartość 2</td>
+					<td>Zawartość 3</td>
+					<td>Zawartość 4</td>
+					<td>Zawartość 5</td>
+				</tr>
+				<tr>
+					<td>Zawartość 1</td>
+					<td>Zawartość 2</td>
+					<td>Zawartość 3</td>
+					<td>Zawartość 4</td>
+					<td>Zawartość 5</td>
+				</tr>
+				<tr>
+					<td>Zawartość 1</td>
+					<td>Zawartość 2</td>
+					<td>Zawartość 3</td>
+					<td>Zawartość 4</td>
+					<td>Zawartość 5</td>
+				</tr>
+			</tbody>
+		</table>
+		<br><br>
+		
+		<table border="1"> 
+			<caption>Cennik kursów</caption>
+            <thead>
+				<tr>
+					<th>Kategoria</th>
+					<th>Kurs</th>
+					<th>Cena(PLN)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan = 3>Programowanie</td>  <!--scal 3 komórki w pionie-->
+					<td>Java</td>
+					<td>45</td>
+				</tr>
+				<tr>
+					<td>Python</td>
+					<td>35</td>
+				</tr>
+				<tr>
+					<td>Fortran</td>
+					<td>30</td>
+				</tr>
+				<tr>
+					<td rowspan="2">WWW</td>   <!--scal 2 komórki w pionie-->
+					<td>HTML</td>
+					<td>38</td>
+				</tr>
+				<tr>
+					<td>CSS</td>
+					<td>78</td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center">kursy w j. polskim</td>  <!--scal 3 komórki w poziomie-->
+				</tr>
+			</tbody>
+		</table>
+		<br><br>
+		<div>jakiś tekst <br>      <!-- div to neutralny tag, który wyświetla tekst  w ramach bloku na całą szerokośc strony -->
+		<span>jakiś inny tekst</span></div>  <!-- span to neutralny tag, który wyświetla tekst w bloku o szerokości zawartości-->
+		<div class="div-text wycentrowane">testowy tekst</div>     <!-- nałożone klasy 'div-text' i 'wycentrowane' zdef. w pliku CSS -->
+		<div class="div-text wycentrowane">testowy tekst</div>
+		<div class="div-text wycentrowane">testowy tekst</div>
+		<div class="div-text wycentrowane">testowy tekst</div>
+		<div class="div-text wycentrowane">testowy tekst</div>
+		<div class="div-text wycentrowane">testowy tekst</div>
+		<br>
+		
+		<div class="type1">block</div>    <!-- type1 to klasa z pliku CSS z własnością "display" równą "block" -->
+		<div class="type1">block</div>
+		<div class="type1">block</div>
+
+		<div class="type2">inline</div>   <!-- type2 to klasa z pliku CSS z własnością "display" równą "inline" -->
+		<div class="type2">inline</div>
+		<div class="type2">inline</div>
+		<br>
+		<div class="type3">inline-block</div>   <!-- type3 to klasa z pliku CSS z własnością "display" równą "inline-block", czyli block ale domyślnie o szerokości zawartości tagu, 
+		                                               czyli jak w inline, ale można mu ustawiać width i height -->
+		<div class="type3">inline-block</div>
+		<div class="type3">inline-block</div>
+		<br>
+		<table id="tabela_selektory" style="background-color: rgb(66, 128, 63);">
+			<caption><b>Selektory</b></caption>
+			<thead>
+				<tr>
+					<th style="text-align: center;color: black;">Selektor</th><th style="text-align: center;color: black;">Wyjaśnienie</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>p</td><td>wybieranie wszystkich elementów o nazwie p</td>
+				</tr>
+				<tr>
+					<td>.jakas_klasa</td><td>wybieranie wszystkich elementów z klasą "jakas_klasa"</td>
+				</tr>
+				<tr>
+					<td>#iden</td><td>wybieranie wszystkich elementów o id "iden"</td>
+				</tr>
+				<tr>
+					<td>div,p</td><td>wybieranie wszystkich elementów "div" i "p"</td>
+				</tr>
+				<tr>
+					<td>div p</td><td>wybieranie wszystkich elementów p które są w elemencie div</td>
+				</tr>
+				<tr>
+					<td>div .jakas_klasa</td><td>wybieranie wszystkich elementów z klasą "jakas_klasa" które są w tagu div</td>
+				</tr>
+				<tr>
+					<td>div p.jakas_klasa</td><td>wybieranie wszystkich elementów p które mają klasę "jakas_klasa" i są w elemencie div</td>
+				</tr>
+				<tr>
+					<td>*</td><td>wybieranie wszystkich elementów na stronie</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<h2>Ramki</h2>
+		<div id="border">
+			<div class="none">none</div>
+			<div class="dotted">dotted</div>
+			<div class="dashed">dashed</div>
+			<div class="solid">solid</div>
+			<div class="double">double</div>
+			<div class="groove">groove</div>
+			<div class="ridge">ridge</div>
+			<div class="inset">inset</div>
+			<div class="outset">outset</div>
+			<div class="lewa_strona">lewa strona</div>
+			<div class="rozne_parametry">różne parametry</div>
+			<div class="definicja1">Świat jest okrągły!!!</div>
+			<div class="definicja2">Sklep u Julka jest fajny</div>		
+		</div>    
+		<div style="width: 300px;" class="zaokr_kraw">jakiś div</div>
+
+		<div id="videokursy">
+			<a href="video-kurs-csharp.html"><img src="images/video-kurs-csharp.png" alt="video-kurs-csharp"></a>
+			<a href="video-kurs-java.html"><img src="images/video-kurs-java.png" alt="video-kurs-java"></a>
+			<a href="video-kurs-php.html"><img src="images/video-kurs-php.png" alt="video-kurs-php"></a>
+			<a href="video-kurs-pozycjonowania.html"><img src="images/video-kurs-pozycjonowania.png" alt="video-kurs-CEO"></a>
+		</div>
+		<div id="komunikat">Bardzo ważny komunikat</div>
+
+		<br><span class="help" data-dymek="to jest pomocna informacja!">Help me!</span>    <!-- data-dymek to tzw. atrybut własny a nie standardowy -->
+		<span class="help" data-dymek="to jest inna informacja">Help me!</span> 
+		<br><br>   <!-- cechy obiektów o przypisanym atrybucie własnym 'data-dymek' są w CSS zdefiniowane -->
+		<span id="gwarancja" data-dymek="Do 30 dni możesz zwrócić kurs bez podawania przyczyny."><img src="images/gwarancja.gif" alt="gwarancja"></span>
+		
+		<p class="test-tekst">
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+			To jest testowy tekst o niczym.
+		</p>
+
+		Imię i nazwisko: <input type="text" class="imie-nazwisko">
+		<br>
+
+		<p class="przyklad">Dzieje się tak ponieważ ścieżki w mózgu do alfabetu, z którego korzystamy podczas pisania, są jak autostrady z wieloma punktami doczepienia się. W końcu alfabet znamy od prawie zawsze, a ścieżki do rzeczy, które znamy dłużej są szersze i jest ich więcej dlatego właśnie w tym wypadku są to wręcz autostrady. A zapamiętywanie informacji w mózgu polega na tym, że dołączamy kolejne informacje do już istniejących ścieżek. Nowe informacje są po prostu doczepiane do starych. Im bardziej 'wytarte' ścieżki i im częściej 'używane' tym lepiej dla nas i dla naszego zapamiętywania. Dlatego warto bawić się w skojarzenia podczas zapamiętywania czegoś lub też nadawania temu sensu.</p>
+    
+		<p class="przyklad">Więc od dzisiaj przestań oglądać video tutorial na 'auto-pilocie'. Nie oglądaj ich jeden po drugim bez robienia ćwiczeń/tworzenia notatek. Oczywiście, szybciej jest przelecieć przez wszystkie lekcje 'tak po prostu', ale nie wyciągniesz z nich tak wiele, gdybyś robił notatki.</p>
+
+
+		<br><br>
+		<address>
+			Julian Piękoś <br>
+			Sklep u Julka <br>
+			Tel: <a href="tel:+48999888777">999 888 777</a> <br>
+			E-mail: <a href="mailto:julian.piekos2015@gmail.com?subject=Zapytanie o ofertę sklepu">julian.piekos2015@gmail.com</a><br>
+			E-mail w Gmailu: <a href="https://mail.google.com/mail/u/0/?shva=1#inbox?compose=CllgCJNvvccrpNVGhjJmNvWsxFmQvmpTZjnKDpVpkPlnNjbBrFFBJzLBDQJRMJfXSqNLJwNVjHg" target="_blank">julian.piekos2015@gmail.com</a>
+		</address>
+		<a href="/formularz_kontaktowy/index.html">Wyślij maila do nas</a>
+		<br><br><br><br>
+		<a href="#paragraf">Do paragrafu</a>  <!-- przesuń do identyfikatora "paragraf"-->
+		<a href="#top" id="do-gory">↑</a>    <!-- przesuń do góry strony-->
+		<br><br><br><br><br>
+	</body>	
+</html>
